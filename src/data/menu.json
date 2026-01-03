@@ -1,0 +1,84 @@
+[
+  {
+    "id": 1,
+    "name": "Margherita Magic",
+    "description": "Classic tomato sauce, mozzarella cheese, fresh basil.",
+    "price": 12.00,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuC5R9JBgmDVKwqzRPdCO8R7dv6n5-TXddFDiqDxuLX5rXoejQ7IaYze80hNobfcmuGphd95rXoojKucKHXUZAsMx4B05YcUWaGe-LcQ2P4FOrAcYgf03Mn-UXLj47BEveOJSZuwQoSoXj_rxELoPb1BWY14pYtRy-bRjEaG5LQJZkuDEmhvtMfoRul1vatH1LKq3ggH0OwyWs26EceR8ryNLaArpb05e0YIGH_hbZVug5v6qIzG8rjMbkS35Cn_1xeI4XVevYcstcQ",
+    "category": "veg",
+    "tags": ["vegetarian", "classic"],
+    "badge": "New"
+  },
+  {
+    "id": 2,
+    "name": "Spicy Pepperoni",
+    "description": "Loaded with crispy pepperoni and chili flakes.",
+    "price": 15.50,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBJdfH1B7-RZ7u48t0a5Q84Ssy3GkOW9xNhymtJn3IK8yG5sNqddKn3Cfclut13-x5peS9NFSVeIKRurhUExVEiauZc9letorxmCIRHhsWEun7JPynMg3MmR7UvS79Di72SVzD0__cohjDVnNdizKqxTk3wnQykzqBnkdmDyLGF3N766GKrTGqxfMS3QzTte1LPV1_Z6NfiQ8kuXbq7ivFwob3XYXHXPddCnDBhvx9lMC8cWH0gn8otEB4X5JaQ4ZH-lOtb19UM5hY",
+    "category": "non-veg",
+    "tags": ["spicy", "meat"],
+    "badge": null
+  },
+  {
+    "id": 3,
+    "name": "BBQ Chicken",
+    "description": "Smoky BBQ sauce base, grilled chicken, red onions.",
+    "price": 16.00,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDA5hUJGtRWicRFCBBwQl8HtNCrHdMVa_gcPWhQ5jWpR1IYZ0FLBc14tih72qCATS48N7z1HFPee1rbyONziMlCKr92eRrVrygZljPQq9GCKKIjFSYQtO9RUV3RdJr85PGNRRHEjmRuO3nAQADUAIMPDkvGgQ2V0ku6MXq0Ipaapj2pKxVuyKHnH53RLc6q4pO8VpW82iqUmVWMvVdz8lcIJ5a2BiCJNmrsugbbbp9_lmAA016pKyT4xYZbG8P-6bTxJsWEyQmUbSo",
+    "category": "non-veg",
+    "tags": ["bbq", "chicken"],
+    "badge": "Hot",
+    "rating": 4.8
+  },
+  {
+    "id": 4,
+    "name": "Veggie Supreme",
+    "description": "Mushrooms, bell peppers, olives, and onions.",
+    "price": 14.00,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCH4ljnz6254dMbp-Rt2boqyHf9m0_AvBt2FuuuLlMGSTsg2lbbR0_fvsZVxSsYUWi9O5iuvCi2ibVirn7IQdhpIDqS6y7-d7tnB8k_MIhTY7KKbZbYRUyRhjB60XKlvXXVE7szz20ApR4Vx_ZByR8JjtsD9AFyVDFBd1ShoizYzc5ZtGbsAEd5A0BlttYL9kvDMtDUFTtC_-srymkFdXsc6DBTmYO3IlzRHIeNLSiaruNBOoAFcpLRAS3bPtv43CjXQ0PtJ_LSln4",
+    "category": "veg",
+    "tags": ["vegetarian", "veggies"],
+    "badge": null
+  },
+  {
+    "id": 5,
+    "name": "Four Cheese",
+    "description": "Mozzarella, cheddar, parmesan, and gouda.",
+    "price": 13.50,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDJO1yIyeOOUHxzG9G1N2Nw1LotTRBTGcLzJYDLOxlepCQRO6PksuSXF7Zn1it5tIhtt6pRY__HexQkn7_Pcpdt2NhqWuyMyVQErq7v4grHJeUIYFFDDO8uCE9OzV3EZVnYB1DjB3fzGi5jyAI-Ps89op9iNoSCspiSUWsvbKJq8KxAr2SVckkrogNHFH9vfwxHXdL2B_bzz5IsYT-GHO9vT-cNnT7305yZxsBV4BjEajip-4SxVHaaw0xhFqwx449gqi5zpFNNlW0",
+    "category": "veg",
+    "tags": ["cheese", "vegetarian"],
+    "badge": null
+  },
+  {
+    "id": 6,
+    "name": "Meat Lovers",
+    "description": "Ham, beef, pepperoni, and sausage.",
+    "price": 18.00,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuANeXfZuuWL6ur70-RiQfs6azNVjtHU8lHUzYwkfimjuympdo0XKYO_fECJA78_Ph5tWNHeAQFXiUQXT-8OD4fBnzTgKbGUOHV6fniwXf3nVgnbephty7GPloEllkO8A9HMBkBBBNq-9Ncd_9KQHNf1Dq7uUTqhUlaZ5U7f8YrXJJAn2paHucldxn01CeEzeSfdC0sh28LWSIEuucHNqzyOpaIfrlCMuRG34y-NdH5sL8bkQ7gmHR2LBhuk0iOXOHft8Ksdd0Z3FPc",
+    "category": "non-veg",
+    "tags": ["meat", "premium"],
+    "badge": null
+  },
+  {
+    "id": 7,
+    "name": "Coke",
+    "description": "Refreshing cola drink, 500ml bottle.",
+    "price": 2.00,
+    "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=400&h=400&fit=crop",
+    "category": "beverages",
+    "tags": ["drink", "soda"],
+    "badge": null
+  },
+  {
+    "id": 8,
+    "name": "Garlic Knots",
+    "description": "6 pieces with marinara sauce.",
+    "price": 5.00,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCFhSDxY9QcZxGlglHP_XMrooHZTKFXAcGnrNqJvQucH7Ev3NPV0ZcylMVmCicgd0MO1GGp1r-U4IgPNG7YA7jPgtupotKcTr19h2pyW-zPInaWbeVCmikC6iHY-RDMIXxoGMEFkjQJpzPaVDGZNqQV3g9jXaa94g1eiYcSkTiLZipP4Fqpc4-gw71sjmfyBgnZwgBGr6Pd4_u41W4T1fTFxbv9MSQJIVuYRRPiyg3rGzXBA6YmpRJCWqdooSGu0RTr0iMsrbFX8KI",
+    "category": "veg",
+    "tags": ["appetizer", "vegetarian"],
+    "badge": "Best"
+  }
+]
+
