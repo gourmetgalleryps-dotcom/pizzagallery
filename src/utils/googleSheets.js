@@ -24,8 +24,18 @@ export async function sendToGoogleSheets(orderData, googleSheetsWebAppUrl) {
     // Format items for Google Sheets
     const itemsString = orderData.items
       .map((item) => {
-        const sizeText = item.size && item.size !== "Regular" ? ` (${item.size})` : "";
-        return `${item.quantity}x ${item.name}${sizeText}`;
+        // Normalize size display - replace "Small (10\")" or variations with "10 inches"
+        let displaySize = item.size;
+        if (displaySize && displaySize !== "Regular") {
+          // If size contains "Small" or "10", normalize to "10 inches" for pizzas
+          if (displaySize.includes("Small") || (displaySize.includes("10") && !displaySize.includes("inches"))) {
+            displaySize = "10 inches";
+          }
+          const sizeText = ` (${displaySize})`;
+          return `${item.quantity}x ${item.name}${sizeText}`;
+        } else {
+          return `${item.quantity}x ${item.name}`;
+        }
       })
       .join(", ");
 

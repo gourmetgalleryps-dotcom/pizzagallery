@@ -64,8 +64,18 @@ export function useWhatsApp(cartItems = [], customerInfo = null) {
     cartItems.forEach((item) => {
       const itemTotal = item.price * item.quantity;
       total += itemTotal;
-      const sizeText = item.size && item.size !== "Regular" ? ` (${item.size})` : "";
-      message += `${item.quantity}x ${item.name}${sizeText} - ₹${itemTotal.toLocaleString('en-IN')}\n`;
+      // Normalize size display - replace "Small (10\")" or variations with "10 inches"
+      let displaySize = item.size;
+      if (displaySize && displaySize !== "Regular") {
+        // If size contains "Small" or has "10" without "inches", normalize to "10 inches" for pizzas
+        if (displaySize.includes("Small") || (displaySize.includes("10") && !displaySize.includes("inches"))) {
+          displaySize = "10 inches";
+        }
+        const sizeText = ` (${displaySize})`;
+        message += `${item.quantity}x ${item.name}${sizeText} - ₹${itemTotal.toLocaleString('en-IN')}\n`;
+      } else {
+        message += `${item.quantity}x ${item.name} - ₹${itemTotal.toLocaleString('en-IN')}\n`;
+      }
     });
 
     message += `\n*Total: ₹${total.toLocaleString('en-IN')}*`;
