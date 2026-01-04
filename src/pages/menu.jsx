@@ -7,9 +7,9 @@ import { Pizza, Truck, ShoppingCart, Star, Plus, X, MapPin, Phone, Clock, Award,
 import { useCart } from '@/context/CartContext';
 import CartDrawer from '@/components/features/cart/CartDrawer';
 import logo from '@/images/logo.png';
-import bruschettaTrio from '@/images/Bruschetta-Trio.png';
 import capreseSalad from '@/images/Caprese-Salad.png';
 import dessert1 from '@/images/dessert1.jpeg';
+import kombucha from '@/images/kombucha.jpeg';
 import homeLand from '@/images/home-land.jpg';
 import pizza1 from '@/images/pizza1.jpeg';
 import pizza2 from '@/images/pizza2.jpeg';
@@ -29,65 +29,65 @@ const beVietnamPro = Be_Vietnam_Pro({
 const menuData = [
     {
         id: 1,
-        title: "Bruschetta Trio",
-        description: "Classic Tomato Basil, Roasted Garlic Mushroom, Basil Pesto, Caprese Salad Skewers, Cherry tomatoes, Fresh Mozzarella, Basil, Drizzled with Balsamic Glaze",
-        image: bruschettaTrio,
+        title: "Caprese Salad Skewers",
+        description: "Cherry tomatoes, Fresh Mozzarella, Basil, Balsamic Glaze",
+        image: capreseSalad,
         category: "appetizers",
-        price: 250,
+        price: 299,
         isPizza: false
     },
     {
         id: 2,
-        title: "Caprese Salad Skewers",
-        description: "Cherry tomatoes, Fresh Mozzarella, Basil, Balsamic Glaze drizzle",
-        image: capreseSalad,
-        category: "appetizers",
-        price: 220,
-        isPizza: false
+        title: "Margherita Pizza",
+        description: "Our signature san marzano sauce, fior Di latte cheese, Pamesan cheese, EVOO drizzle. (We use our own signature san marzano sauce. Take one bite, and the flavor will stay with you)",
+        image: pizza1,
+        category: "pizza",
+        price: 319,
+        isPizza: true
     },
     {
         id: 3,
-        title: "Margherita",
-        description: "San Marzano Sauce, Fior Di Latte, Basil, Parmesan Cheese, EVOO Drizzle",
-        image: pizza1,
+        title: "Verdure Grigliate Pizza",
+        description: "Our Signature San marzana sauce, Grilled zucchini, bell peppers, mozarella, montery jack, origano flakes. (Crafted with a great cheese combination and fresh, colorful veggies.)",
+        image: pizza4,
         category: "pizza",
-        price: 280,
+        price: 389,
         isPizza: true
     },
     {
         id: 4,
-        title: "Funghi e Tartufo",
-        description: "Fresh shredded Mozzarella, Cheese sauce, Mushrooms, Truffle oil drizzle, Cheddar Cheese, Arugula Leaves",
+        title: "Funghi e Tartufo Pizza",
+        description: "Chefs special mushroom cheese sauce, Fresh Shredded Mozzarella, mushrooms, truffle oil drizzle, chedder cheese, arugula leaves. (Chef special Mushroom Sauce: Trust us.. the taste starts from the first bite)",
         image: pizza3,
         category: "pizza",
-        price: 450,
+        price: 459,
         isPizza: true
     },
     {
         id: 5,
-        title: "Verdure Grigliate",
-        description: "Grilled Zucchini, Bell peppers, Smoked Mozzarella, Monterey jack, San Marzano Sauce, Fresh oregano",
-        image: pizza4,
+        title: "Pesto e Pomodorini Pizza",
+        description: "Basil pesto sauce, mozzarella, cherry tomatoes, pine nuts",
+        image: pizza5,
         category: "pizza",
-        price: 420,
+        price: 559,
         isPizza: true
     },
     {
         id: 6,
-        title: "Basil Pesto Pizza",
-        description: "Fresh Basil, Pesto, Fior Di Latte, Confit Cherry Tomatoes, Olives, Roasted Pine nuts, Micro Greens, Feta Cheese dollops, EVOO drizzle",
-        image: pizza5,
-        category: "pizza",
-        price: 380,
-        isPizza: true
-    },
-    {
-        id: 7,
         title: "Panna Cotta",
         description: "Fresh Cream, Full Cream Milk, Vanilla Essence, Veg Gelatin, Sugar, Blueberries and Lemon",
         image: dessert1,
         category: "dessert",
-        price: 180,
+        price: 79,
+        isPizza: false
+    },
+    {
+        id: 7,
+        title: "Kombucha",
+        description: "Refreshing fermented tea beverage",
+        image: kombucha,
+        category: "beverages",
+        price: 199,
         isPizza: false
     }
 ];
@@ -113,7 +113,7 @@ export default function MenuPage() {
             name: item.title,
             price: item.price,
             image: item.image,
-            size: item.isPizza ? "Small (10\")" : "Regular",
+            size: item.isPizza ? "10 inches" : "Regular",
             description: item.description
         });
 
@@ -181,21 +181,11 @@ export default function MenuPage() {
                                     "hasMenuItem": [
                                         {
                                             "@type": "MenuItem",
-                                            "name": "Bruschetta Trio",
-                                            "description": "Classic Tomato Basil, Roasted Garlic Mushroom, Basil Pesto, Caprese Salad Skewers, Cherry tomatoes, Fresh Mozzarella, Basil, Drizzled with Balsamic Glaze",
-                                            "offers": {
-                                                "@type": "Offer",
-                                                "price": "250",
-                                                "priceCurrency": "INR"
-                                            }
-                                        },
-                                        {
-                                            "@type": "MenuItem",
                                             "name": "Caprese Salad Skewers",
-                                            "description": "Cherry tomatoes, Fresh Mozzarella, Basil, Balsamic Glaze drizzle",
+                                            "description": "Cherry tomatoes, Fresh Mozzarella, Basil, Balsamic Glaze",
                                             "offers": {
                                                 "@type": "Offer",
-                                                "price": "220",
+                                                "price": "299",
                                                 "priceCurrency": "INR"
                                             }
                                         }
@@ -208,41 +198,41 @@ export default function MenuPage() {
                                     "hasMenuItem": [
                                         {
                                             "@type": "MenuItem",
-                                            "name": "Margherita",
-                                            "description": "San Marzano Sauce, Fior Di Latte, Basil, Parmesan Cheese, EVOO Drizzle",
+                                            "name": "Margherita Pizza",
+                                            "description": "Our signature san marzano sauce, fior Di latte cheese, Pamesan cheese, EVOO drizzle. (We use our own signature san marzano sauce. Take one bite, and the flavor will stay with you)",
                                             "offers": {
                                                 "@type": "Offer",
-                                                "price": "280",
+                                                "price": "319",
                                                 "priceCurrency": "INR"
                                             }
                                         },
                                         {
                                             "@type": "MenuItem",
-                                            "name": "Funghi e Tartufo",
-                                            "description": "Fresh shredded Mozzarella, Cheese sauce, Mushrooms, Truffle oil drizzle, Cheddar Cheese, Arugula Leaves",
+                                            "name": "Verdure Grigliate Pizza",
+                                            "description": "Our Signature San marzana sauce, Grilled zucchini, bell peppers, mozarella, montery jack, origano flakes. (Crafted with a great cheese combination and fresh, colorful veggies.)",
                                             "offers": {
                                                 "@type": "Offer",
-                                                "price": "450",
+                                                "price": "389",
                                                 "priceCurrency": "INR"
                                             }
                                         },
                                         {
                                             "@type": "MenuItem",
-                                            "name": "Verdure Grigliate",
-                                            "description": "Grilled Zucchini, Bell peppers, Smoked Mozzarella, Monterey jack, San Marzano Sauce, Fresh oregano",
+                                            "name": "Funghi e Tartufo Pizza",
+                                            "description": "Chefs special mushroom cheese sauce, Fresh Shredded Mozzarella, mushrooms, truffle oil drizzle, chedder cheese, arugula leaves. (Chef special Mushroom Sauce: Trust us.. the taste starts from the first bite)",
                                             "offers": {
                                                 "@type": "Offer",
-                                                "price": "420",
+                                                "price": "459",
                                                 "priceCurrency": "INR"
                                             }
                                         },
                                         {
                                             "@type": "MenuItem",
-                                            "name": "Basil Pesto Pizza",
-                                            "description": "Fresh Basil, Pesto, Fior Di Latte, Confit Cherry Tomatoes, Olives, Roasted Pine nuts, Micro Greens, Feta Cheese dollops, EVOO drizzle",
+                                            "name": "Pesto e Pomodorini Pizza",
+                                            "description": "Basil pesto sauce, mozzarella, cherry tomatoes, pine nuts",
                                             "offers": {
                                                 "@type": "Offer",
-                                                "price": "380",
+                                                "price": "559",
                                                 "priceCurrency": "INR"
                                             }
                                         }
@@ -259,7 +249,24 @@ export default function MenuPage() {
                                             "description": "Fresh Cream, Full Cream Milk, Vanilla Essence, Veg Gelatin, Sugar, Blueberries and Lemon",
                                             "offers": {
                                                 "@type": "Offer",
-                                                "price": "180",
+                                                "price": "79",
+                                                "priceCurrency": "INR"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@type": "MenuSection",
+                                    "name": "Beverages",
+                                    "description": "Refreshing beverages",
+                                    "hasMenuItem": [
+                                        {
+                                            "@type": "MenuItem",
+                                            "name": "Kombucha",
+                                            "description": "Refreshing fermented tea beverage",
+                                            "offers": {
+                                                "@type": "Offer",
+                                                "price": "199",
                                                 "priceCurrency": "INR"
                                             }
                                         }
@@ -352,7 +359,8 @@ export default function MenuPage() {
                         { id: "all", label: "All Menu" },
                         { id: "appetizers", label: "Appetizers" },
                         { id: "pizza", label: "Pizza" },
-                        { id: "dessert", label: "Dessert" }
+                        { id: "dessert", label: "Dessert" },
+                        { id: "beverages", label: "Beverages" }
                     ].map(filter => (
                         <button
                             key={filter.id}
@@ -381,7 +389,7 @@ export default function MenuPage() {
                             />
                         ))}
                     </MenuSection>
-                    <MenuSection title="Artisanal Sourdough Pizza">
+                    <MenuSection title="Artisanal Sourdough Pizzas">
                         {menuData.filter(item => item.category === "pizza").map(item => (
                             <MenuCard
                                 key={item.id}
@@ -399,13 +407,24 @@ export default function MenuPage() {
                             />
                         ))}
                     </MenuSection>
+                    <MenuSection title="Beverages">
+                        {menuData.filter(item => item.category === "beverages").map(item => (
+                            <MenuCard
+                                key={item.id}
+                                item={item}
+                                onAddClick={() => setCustomizationModal(item)}
+                            />
+                        ))}
+                    </MenuSection>
                 </>
             ) : (
                 // Show filtered category
                 <MenuSection title={
                     activeFilter === "appetizers" ? "Appetizers" :
-                        activeFilter === "pizza" ? "Artisanal Sourdough Pizza" :
-                            "Dessert"
+                        activeFilter === "pizza" ? "Artisanal Sourdough Pizzas" :
+                            activeFilter === "dessert" ? "Dessert" :
+                                activeFilter === "beverages" ? "Beverages" :
+                                    "All Menu"
                 }>
                     {filteredMenu.map(item => (
                         <MenuCard
@@ -469,7 +488,7 @@ export default function MenuPage() {
                                 <a href="#" className="w-12 h-12 bg-[#565c40] rounded-full flex items-center justify-center hover:bg-[#88f59b] transition-colors">
                                     <Facebook className="w-6 h-6 text-white" />
                                 </a>
-                                <a href="#" className="w-12 h-12 bg-[#565c40] rounded-full flex items-center justify-center hover:bg-[#88f59b] transition-colors">
+                                <a href="https://www.instagram.com/pizzagallery.in?igsh=MXcydDFpMW0wMW84OQ==" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#565c40] rounded-full flex items-center justify-center hover:bg-[#88f59b] transition-colors cursor-pointer">
                                     <Instagram className="w-6 h-6 text-white" />
                                 </a>
                                 <a href="#" className="w-12 h-12 bg-[#565c40] rounded-full flex items-center justify-center hover:bg-[#88f59b] transition-colors">
@@ -531,7 +550,7 @@ export default function MenuPage() {
                                 <div className="flex items-center justify-between">
                                     <div>
                                         <div className="font-bold text-[#565c40] mb-1">
-                                            Size: Small (10")
+                                            Size: 10 inches
                                         </div>
                                         <div className="text-sm text-gray-600">
                                             Standard size for all pizzas
@@ -600,7 +619,7 @@ export default function MenuPage() {
                                 <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#88f59b] transition-colors">
                                     <Facebook className="w-5 h-5" />
                                 </a>
-                                <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#88f59b] transition-colors">
+                                <a href="https://www.instagram.com/pizzagallery.in?igsh=MXcydDFpMW0wMW84OQ==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#88f59b] transition-colors cursor-pointer">
                                     <Instagram className="w-5 h-5" />
                                 </a>
                                 <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#88f59b] transition-colors">

@@ -21,7 +21,7 @@ export const BREAKPOINTS = {
   desktop: 1024,
 };
 
-export const WHATSAPP_NUMBER = "+919550455537";
+export const WHATSAPP_NUMBER = "+916302874827";
 
 // Google Sheets Web App URL - Replace with your Google Apps Script Web App URL
 // To set up: Create a Google Apps Script, deploy as Web App, and paste the URL here
