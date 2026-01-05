@@ -563,7 +563,7 @@ export default function MenuPage() {
                         <div className="flex items-center justify-between mb-4">
                             <span className="text-lg font-bold text-[#565c40]">Total:</span>
                             <span className="text-2xl font-black text-[#565c40]">
-                                ₹{customizationModal.price.toLocaleString('en-IN')}
+                                NA
                             </span>
                         </div>
 
@@ -657,7 +657,7 @@ export default function MenuPage() {
                         </div>
                     </div>
                     <div className="text-lg font-black">
-                        ₹{getTotalPrice().toLocaleString('en-IN')}
+                        NA
                     </div>
                 </button>
             )}
@@ -704,10 +704,7 @@ function MenuCard({ item, onAddClick }) {
                 {item.description}
             </p>
 
-            <div className="flex items-center justify-between mt-auto">
-                <span className="text-xl font-black text-[#565c40]">
-                    ₹{item.price.toLocaleString('en-IN')}
-                </span>
+            <div className="flex items-center justify-end mt-auto">
                 <button
                     onClick={onAddClick}
                     className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#88f59b] to-[#5fd672] rounded-full font-bold text-slate-900 hover:scale-105 transition-transform shadow-md"
