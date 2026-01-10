@@ -27,67 +27,77 @@ const beVietnamPro = Be_Vietnam_Pro({
 
 // Menu data with categories
 const menuData = [
-    {
-        id: 1,
-        title: "Caprese Salad Skewers",
-        description: "Cherry tomatoes, Fresh Mozzarella, Basil, Balsamic Glaze",
-        image: capreseSalad,
-        category: "appetizers",
-        price: 299,
-        isPizza: false
-    },
+    // Appetizers commented out for now
+    // {
+    //     id: 1,
+    //     title: "Caprese Salad Skewers",
+    //     description: "Cherry tomatoes, Fresh Mozzarella, Basil, Balsamic Glaze",
+    //     image: capreseSalad,
+    //     category: "appetizers",
+    //     price: 299,
+    //     isPizza: false
+    // },
     {
         id: 2,
         title: "Margherita Pizza",
         description: "Our signature san marzano sauce, fior Di latte cheese, Pamesan cheese, EVOO drizzle. (We use our own signature san marzano sauce. Take one bite, and the flavor will stay with you)",
         image: pizza1,
         category: "pizza",
-        price: 319,
+        price: 449,
         isPizza: true
     },
     {
         id: 3,
-        title: "Verdure Grigliate Pizza",
+        title: "Grilled Veg Pizza",
         description: "Our Signature San marzana sauce, Grilled zucchini, bell peppers, mozarella, montery jack, origano flakes. (Crafted with a great cheese combination and fresh, colorful veggies.)",
         image: pizza4,
         category: "pizza",
-        price: 389,
+        price: 569,
         isPizza: true
     },
     {
         id: 4,
-        title: "Funghi e Tartufo Pizza",
+        title: "Mushroom Pizza",
         description: "Chefs special mushroom cheese sauce, Fresh Shredded Mozzarella, mushrooms, truffle oil drizzle, chedder cheese, arugula leaves. (Chef special Mushroom Sauce: Trust us.. the taste starts from the first bite)",
         image: pizza3,
         category: "pizza",
-        price: 459,
+        price: 689,
         isPizza: true
     },
     {
         id: 5,
-        title: "Pesto e Pomodorini Pizza",
+        title: "Basil Pesto Pizza",
         description: "Basil pesto sauce, mozzarella, cherry tomatoes, pine nuts",
         image: pizza5,
         category: "pizza",
-        price: 559,
+        price: 789,
         isPizza: true
     },
     {
         id: 6,
+        title: "Half n Half",
+        description: "Choose any two pizza flavors on one pizza",
+        image: pizza2,
+        category: "pizza",
+        price: 649,
+        isPizza: true
+    },
+    {
+        id: 7,
         title: "Panna Cotta",
         description: "Fresh Cream, Full Cream Milk, Vanilla Essence, Veg Gelatin, Sugar, Blueberries and Lemon",
         image: dessert1,
         category: "dessert",
-        price: 79,
+        price: 199,
         isPizza: false
     },
     {
-        id: 7,
+        id: 8,
         title: "Kombucha",
         description: "Refreshing fermented tea beverage",
         image: kombucha,
         category: "beverages",
-        price: 199,
+        price: 230,
         isPizza: false
     }
 ];
@@ -357,7 +367,7 @@ export default function MenuPage() {
                 <div className="flex flex-wrap gap-3 justify-center">
                     {[
                         { id: "all", label: "All Menu" },
-                        { id: "appetizers", label: "Appetizers" },
+                        // { id: "appetizers", label: "Appetizers" },
                         { id: "pizza", label: "Pizza" },
                         { id: "dessert", label: "Dessert" },
                         { id: "beverages", label: "Beverages" }
@@ -380,7 +390,8 @@ export default function MenuPage() {
             {activeFilter === "all" ? (
                 // Show all categories grouped
                 <>
-                    <MenuSection title="Appetizers">
+                    {/* Appetizers commented out for now */}
+                    {/* <MenuSection title="Appetizers">
                         {menuData.filter(item => item.category === "appetizers").map(item => (
                             <MenuCard
                                 key={item.id}
@@ -388,7 +399,7 @@ export default function MenuPage() {
                                 onAddClick={() => setCustomizationModal(item)}
                             />
                         ))}
-                    </MenuSection>
+                    </MenuSection> */}
                     <MenuSection title="Artisanal Sourdough Pizzas">
                         {menuData.filter(item => item.category === "pizza").map(item => (
                             <MenuCard
@@ -420,7 +431,7 @@ export default function MenuPage() {
             ) : (
                 // Show filtered category
                 <MenuSection title={
-                    activeFilter === "appetizers" ? "Appetizers" :
+                    // activeFilter === "appetizers" ? "Appetizers" :
                         activeFilter === "pizza" ? "Artisanal Sourdough Pizzas" :
                             activeFilter === "dessert" ? "Dessert" :
                                 activeFilter === "beverages" ? "Beverages" :
@@ -563,7 +574,7 @@ export default function MenuPage() {
                         <div className="flex items-center justify-between mb-4">
                             <span className="text-lg font-bold text-[#565c40]">Total:</span>
                             <span className="text-2xl font-black text-[#565c40]">
-                                NA
+                                ₹{customizationModal.price.toLocaleString('en-IN')}
                             </span>
                         </div>
 
@@ -657,7 +668,7 @@ export default function MenuPage() {
                         </div>
                     </div>
                     <div className="text-lg font-black">
-                        NA
+                        ₹{getTotalPrice().toLocaleString('en-IN')}
                     </div>
                 </button>
             )}
@@ -704,7 +715,10 @@ function MenuCard({ item, onAddClick }) {
                 {item.description}
             </p>
 
-            <div className="flex items-center justify-end mt-auto">
+            <div className="flex items-center justify-between mt-auto">
+                <span className="text-xl font-black text-[#565c40]">
+                    ₹{item.price.toLocaleString('en-IN')}
+                </span>
                 <button
                     onClick={onAddClick}
                     className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#88f59b] to-[#5fd672] rounded-full font-bold text-slate-900 hover:scale-105 transition-transform shadow-md"

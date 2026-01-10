@@ -90,7 +90,7 @@ export default function CartSummary({ customerInfo, onCustomerInfoSubmit, onCust
         <div className="flex justify-between items-center text-sm text-gray-500 font-medium">
           <span>Subtotal</span>
           <span className="text-gray-900">
-            NA
+            ₹{subtotal.toLocaleString('en-IN')}
           </span>
         </div>
         <div className="flex justify-between items-center text-sm text-gray-500 font-medium">
@@ -99,7 +99,7 @@ export default function CartSummary({ customerInfo, onCustomerInfoSubmit, onCust
         </div>
         <div className="flex justify-between items-center text-xl font-black text-gray-900 pt-2">
           <span>Total</span>
-          <span className="text-primary">NA</span>
+          <span className="text-primary">₹{total.toLocaleString('en-IN')}</span>
         </div>
       </div>
 

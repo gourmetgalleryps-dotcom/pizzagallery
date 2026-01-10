@@ -455,7 +455,7 @@ export default function Home() {
             </div>
           </div>
           <div className="text-lg font-black">
-            NA
+            ₹{getTotalPrice().toLocaleString('en-IN')}
           </div>
         </button>
       )}

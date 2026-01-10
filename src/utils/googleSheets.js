@@ -50,7 +50,7 @@ export async function sendToGoogleSheets(orderData, googleSheetsWebAppUrl) {
       customerMobile: orderData.customerMobile || '',
       items: itemsString || '',
       itemCount: itemCount.toString() || '0',
-      total: 'NA',
+      total: orderData.total.toString() || '0',
     });
 
     // Send to Google Sheets via POST request with URL parameters
