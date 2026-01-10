@@ -61,8 +61,6 @@ export function useWhatsApp(cartItems = [], customerInfo = null) {
 
     let total = 0;
 
-    let total = 0;
-
     cartItems.forEach((item) => {
       const itemTotal = item.price * item.quantity;
       total += itemTotal;
