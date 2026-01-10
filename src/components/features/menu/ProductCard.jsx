@@ -72,7 +72,7 @@ export default function ProductCard({ product }) {
         </p>
         <div className="mt-auto flex items-center justify-between">
           <span className="text-lg font-black text-text-main">
-            NA
+            ₹{product.price.toLocaleString('en-IN')}
           </span>
           <button
             onClick={handleAddToCart}
