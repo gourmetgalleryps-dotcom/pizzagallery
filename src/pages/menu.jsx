@@ -43,7 +43,7 @@ const menuData = [
         description: "Our signature san marzano sauce, fior Di latte cheese, Pamesan cheese, EVOO drizzle. (We use our own signature san marzano sauce. Take one bite, and the flavor will stay with you)",
         image: pizza1,
         category: "pizza",
-        price: 449,
+        price: 319,
         isPizza: true
     },
     {
@@ -52,7 +52,7 @@ const menuData = [
         description: "Our Signature San marzana sauce, Grilled zucchini, bell peppers, mozarella, montery jack, origano flakes. (Crafted with a great cheese combination and fresh, colorful veggies.)",
         image: pizza4,
         category: "pizza",
-        price: 569,
+        price: 389,
         isPizza: true
     },
     {
@@ -61,7 +61,7 @@ const menuData = [
         description: "Chefs special mushroom cheese sauce, Fresh Shredded Mozzarella, mushrooms, truffle oil drizzle, chedder cheese, arugula leaves. (Chef special Mushroom Sauce: Trust us.. the taste starts from the first bite)",
         image: pizza3,
         category: "pizza",
-        price: 689,
+        price: 459,
         isPizza: true
     },
     {
@@ -70,7 +70,7 @@ const menuData = [
         description: "Basil pesto sauce, mozzarella, cherry tomatoes, pine nuts",
         image: pizza5,
         category: "pizza",
-        price: 789,
+        price: 559,
         isPizza: true
     },
     {
@@ -88,7 +88,7 @@ const menuData = [
         description: "Fresh Cream, Full Cream Milk, Vanilla Essence, Veg Gelatin, Sugar, Blueberries and Lemon",
         image: dessert1,
         category: "dessert",
-        price: 199,
+        price: 109,
         isPizza: false
     },
     {
@@ -97,7 +97,7 @@ const menuData = [
         description: "Refreshing fermented tea beverage",
         image: kombucha,
         category: "beverages",
-        price: 230,
+        price: 199,
         isPizza: false
     }
 ];
@@ -259,7 +259,7 @@ export default function MenuPage() {
                                             "description": "Fresh Cream, Full Cream Milk, Vanilla Essence, Veg Gelatin, Sugar, Blueberries and Lemon",
                                             "offers": {
                                                 "@type": "Offer",
-                                                "price": "79",
+                                                "price": "109",
                                                 "priceCurrency": "INR"
                                             }
                                         }
