@@ -571,13 +571,6 @@ export default function MenuPage() {
                             </div>
                         )}
 
-                        <div className="flex items-center justify-between mb-4">
-                            <span className="text-lg font-bold text-[#565c40]">Total:</span>
-                            <span className="text-2xl font-black text-[#565c40]">
-                                ₹{customizationModal.price.toLocaleString('en-IN')}
-                            </span>
-                        </div>
-
                         <button
                             onClick={handleAddToCart}
                             className="w-full py-4 bg-gradient-to-r from-[#88f59b] to-[#5fd672] rounded-full font-bold text-slate-900 hover:scale-105 transition-transform shadow-lg"
@@ -651,7 +644,7 @@ export default function MenuPage() {
             {cart.items.length > 0 && (
                 <button
                     onClick={() => setCartOpen(true)}
-                    className="fixed bottom-6 left-6 right-6 z-40 md:hidden flex items-center justify-between px-6 py-4 bg-gradient-to-r from-[#88f59b] to-[#5fd672] rounded-full font-bold text-slate-900 shadow-2xl hover:scale-105 transition-transform"
+                    className="fixed bottom-6 left-6 right-6 z-40 md:hidden flex items-center justify-center px-6 py-4 bg-gradient-to-r from-[#88f59b] to-[#5fd672] rounded-full font-bold text-slate-900 shadow-2xl hover:scale-105 transition-transform"
                 >
                     <div className="flex items-center gap-3">
                         <div className="relative">
@@ -666,9 +659,6 @@ export default function MenuPage() {
                             <div className="text-sm font-semibold">View Cart</div>
                             <div className="text-xs opacity-80">{getTotalItems()} {getTotalItems() === 1 ? 'item' : 'items'}</div>
                         </div>
-                    </div>
-                    <div className="text-lg font-black">
-                        ₹{getTotalPrice().toLocaleString('en-IN')}
                     </div>
                 </button>
             )}
@@ -715,10 +705,7 @@ function MenuCard({ item, onAddClick }) {
                 {item.description}
             </p>
 
-            <div className="flex items-center justify-between mt-auto">
-                <span className="text-xl font-black text-[#565c40]">
-                    ₹{item.price.toLocaleString('en-IN')}
-                </span>
+            <div className="flex items-center justify-end mt-auto">
                 <button
                     onClick={onAddClick}
                     className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#88f59b] to-[#5fd672] rounded-full font-bold text-slate-900 hover:scale-105 transition-transform shadow-md"

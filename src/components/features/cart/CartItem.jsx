@@ -47,9 +47,6 @@ export default function CartItem({ item }) {
           <h3 className="text-gray-900 font-bold text-lg truncate pr-2">
             {item.name}
           </h3>
-          <span className="text-primary font-bold text-lg">
-            ₹{(item.price * item.quantity).toLocaleString('en-IN')}
-          </span>
         </div>
         <p className="text-gray-500 text-xs mb-3 truncate">
           {item.size}

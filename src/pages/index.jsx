@@ -438,7 +438,7 @@ export default function Home() {
       {cart.items.length > 0 && (
         <button
           onClick={() => setCartOpen(true)}
-          className="fixed bottom-6 left-6 right-6 z-40 md:hidden flex items-center justify-between px-6 py-4 bg-gradient-to-r from-[#88f59b] to-[#5fd672] rounded-full font-bold text-slate-900 shadow-2xl hover:scale-105 transition-transform"
+          className="fixed bottom-6 left-6 right-6 z-40 md:hidden flex items-center justify-center px-6 py-4 bg-gradient-to-r from-[#88f59b] to-[#5fd672] rounded-full font-bold text-slate-900 shadow-2xl hover:scale-105 transition-transform"
         >
           <div className="flex items-center gap-3">
             <div className="relative">
@@ -453,9 +453,6 @@ export default function Home() {
               <div className="text-sm font-semibold">View Cart</div>
               <div className="text-xs opacity-80">{getTotalItems()} {getTotalItems() === 1 ? 'item' : 'items'}</div>
             </div>
-          </div>
-          <div className="text-lg font-black">
-            ₹{getTotalPrice().toLocaleString('en-IN')}
           </div>
         </button>
       )}
