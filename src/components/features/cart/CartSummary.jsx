@@ -37,10 +37,10 @@ export default function CartSummary({ customerInfo, onCustomerInfoSubmit, onCust
         items: cart.items.map((item) => ({
           name: item.name,
           quantity: item.quantity,
-          price: "N/A",
+          price: item.price,
           size: item.size,
         })),
-        total: "N/A",
+        total,
       };
 
       // Send to both WhatsApp and Google Sheets simultaneously
@@ -89,7 +89,9 @@ export default function CartSummary({ customerInfo, onCustomerInfoSubmit, onCust
       <div className="space-y-2">
         <div className="flex justify-between items-center text-sm text-gray-500 font-medium">
           <span>Subtotal</span>
-          <span className="text-gray-900">N/A</span>
+          <span className="text-gray-900">
+            ₹{subtotal.toLocaleString('en-IN')}
+          </span>
         </div>
         <div className="flex justify-between items-center text-sm text-gray-500 font-medium">
           <span>Delivery Fee</span>
@@ -97,7 +99,7 @@ export default function CartSummary({ customerInfo, onCustomerInfoSubmit, onCust
         </div>
         <div className="flex justify-between items-center text-xl font-black text-gray-900 pt-2">
           <span>Total</span>
-          <span className="text-primary">N/A</span>
+          <span className="text-primary">₹{total.toLocaleString('en-IN')}</span>
         </div>
       </div>
 

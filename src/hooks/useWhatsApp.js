@@ -59,7 +59,11 @@ export function useWhatsApp(cartItems = [], customerInfo = null) {
     
     message += "*Menu Items:*\n";
 
+    let total = 0;
+
     cartItems.forEach((item) => {
+      const itemTotal = item.price * item.quantity;
+      total += itemTotal;
       // Normalize size display - replace "Small (10\")" or variations with "10 inches"
       let displaySize = item.size;
       if (displaySize && displaySize !== "Regular") {
@@ -68,13 +72,13 @@ export function useWhatsApp(cartItems = [], customerInfo = null) {
           displaySize = "10 inches";
         }
         const sizeText = ` (${displaySize})`;
-        message += `${item.quantity}x ${item.name}${sizeText} - N/A\n`;
+        message += `${item.quantity}x ${item.name}${sizeText} - ₹${itemTotal.toLocaleString('en-IN')}\n`;
       } else {
-        message += `${item.quantity}x ${item.name} - N/A\n`;
+        message += `${item.quantity}x ${item.name} - ₹${itemTotal.toLocaleString('en-IN')}\n`;
       }
     });
 
-    message += `\n*Total: N/A*`;
+    message += `\n*Total: ₹${total.toLocaleString('en-IN')}*`;
 
     return { message, orderId };
   };

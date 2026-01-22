@@ -43,7 +43,7 @@ const menuData = [
         description: "Our signature san marzano sauce, fior Di latte cheese, Pamesan cheese, EVOO drizzle. (We use our own signature san marzano sauce. Take one bite, and the flavor will stay with you)",
         image: pizza1,
         category: "pizza",
-        price: 319,
+        price: 449,
         isPizza: true
     },
     {
@@ -52,7 +52,7 @@ const menuData = [
         description: "Our Signature San marzana sauce, Grilled zucchini, bell peppers, mozarella, montery jack, origano flakes. (Crafted with a great cheese combination and fresh, colorful veggies.)",
         image: pizza4,
         category: "pizza",
-        price: 389,
+        price: 569,
         isPizza: true
     },
     {
@@ -61,7 +61,7 @@ const menuData = [
         description: "Chefs special mushroom cheese sauce, Fresh Shredded Mozzarella, mushrooms, truffle oil drizzle, chedder cheese, arugula leaves. (Chef special Mushroom Sauce: Trust us.. the taste starts from the first bite)",
         image: pizza3,
         category: "pizza",
-        price: 459,
+        price: 689,
         isPizza: true
     },
     {
@@ -70,7 +70,7 @@ const menuData = [
         description: "Basil pesto sauce, mozzarella, cherry tomatoes, pine nuts",
         image: pizza5,
         category: "pizza",
-        price: 559,
+        price: 789,
         isPizza: true
     },
     {
@@ -88,7 +88,7 @@ const menuData = [
         description: "Fresh Cream, Full Cream Milk, Vanilla Essence, Veg Gelatin, Sugar, Blueberries and Lemon",
         image: dessert1,
         category: "dessert",
-        price: 109,
+        price: 199,
         isPizza: false
     },
     {
@@ -97,7 +97,7 @@ const menuData = [
         description: "Refreshing fermented tea beverage",
         image: kombucha,
         category: "beverages",
-        price: 199,
+        price: 230,
         isPizza: false
     }
 ];
@@ -212,7 +212,7 @@ export default function MenuPage() {
                                             "description": "Our signature san marzano sauce, fior Di latte cheese, Pamesan cheese, EVOO drizzle. (We use our own signature san marzano sauce. Take one bite, and the flavor will stay with you)",
                                             "offers": {
                                                 "@type": "Offer",
-                                                "price": "319",
+                                                "price": "449",
                                                 "priceCurrency": "INR"
                                             }
                                         },
@@ -222,7 +222,7 @@ export default function MenuPage() {
                                             "description": "Our Signature San marzana sauce, Grilled zucchini, bell peppers, mozarella, montery jack, origano flakes. (Crafted with a great cheese combination and fresh, colorful veggies.)",
                                             "offers": {
                                                 "@type": "Offer",
-                                                "price": "389",
+                                                "price": "569",
                                                 "priceCurrency": "INR"
                                             }
                                         },
@@ -232,7 +232,7 @@ export default function MenuPage() {
                                             "description": "Chefs special mushroom cheese sauce, Fresh Shredded Mozzarella, mushrooms, truffle oil drizzle, chedder cheese, arugula leaves. (Chef special Mushroom Sauce: Trust us.. the taste starts from the first bite)",
                                             "offers": {
                                                 "@type": "Offer",
-                                                "price": "459",
+                                                "price": "689",
                                                 "priceCurrency": "INR"
                                             }
                                         },
@@ -242,7 +242,7 @@ export default function MenuPage() {
                                             "description": "Basil pesto sauce, mozzarella, cherry tomatoes, pine nuts",
                                             "offers": {
                                                 "@type": "Offer",
-                                                "price": "559",
+                                                "price": "789",
                                                 "priceCurrency": "INR"
                                             }
                                         }
@@ -259,7 +259,7 @@ export default function MenuPage() {
                                             "description": "Fresh Cream, Full Cream Milk, Vanilla Essence, Veg Gelatin, Sugar, Blueberries and Lemon",
                                             "offers": {
                                                 "@type": "Offer",
-                                                "price": "109",
+                                                "price": "199",
                                                 "priceCurrency": "INR"
                                             }
                                         }
@@ -276,7 +276,7 @@ export default function MenuPage() {
                                             "description": "Refreshing fermented tea beverage",
                                             "offers": {
                                                 "@type": "Offer",
-                                                "price": "199",
+                                                "price": "230",
                                                 "priceCurrency": "INR"
                                             }
                                         }
@@ -571,6 +571,13 @@ export default function MenuPage() {
                             </div>
                         )}
 
+                        <div className="flex items-center justify-between mb-4">
+                            <span className="text-lg font-bold text-[#565c40]">Total:</span>
+                            <span className="text-2xl font-black text-[#565c40]">
+                                ₹{customizationModal.price.toLocaleString('en-IN')}
+                            </span>
+                        </div>
+
                         <button
                             onClick={handleAddToCart}
                             className="w-full py-4 bg-gradient-to-r from-[#88f59b] to-[#5fd672] rounded-full font-bold text-slate-900 hover:scale-105 transition-transform shadow-lg"
@@ -644,7 +651,7 @@ export default function MenuPage() {
             {cart.items.length > 0 && (
                 <button
                     onClick={() => setCartOpen(true)}
-                    className="fixed bottom-6 left-6 right-6 z-40 md:hidden flex items-center justify-center px-6 py-4 bg-gradient-to-r from-[#88f59b] to-[#5fd672] rounded-full font-bold text-slate-900 shadow-2xl hover:scale-105 transition-transform"
+                    className="fixed bottom-6 left-6 right-6 z-40 md:hidden flex items-center justify-between px-6 py-4 bg-gradient-to-r from-[#88f59b] to-[#5fd672] rounded-full font-bold text-slate-900 shadow-2xl hover:scale-105 transition-transform"
                 >
                     <div className="flex items-center gap-3">
                         <div className="relative">
@@ -659,6 +666,9 @@ export default function MenuPage() {
                             <div className="text-sm font-semibold">View Cart</div>
                             <div className="text-xs opacity-80">{getTotalItems()} {getTotalItems() === 1 ? 'item' : 'items'}</div>
                         </div>
+                    </div>
+                    <div className="text-lg font-black">
+                        ₹{getTotalPrice().toLocaleString('en-IN')}
                     </div>
                 </button>
             )}
@@ -705,7 +715,10 @@ function MenuCard({ item, onAddClick }) {
                 {item.description}
             </p>
 
-            <div className="flex items-center justify-end mt-auto">
+            <div className="flex items-center justify-between mt-auto">
+                <span className="text-xl font-black text-[#565c40]">
+                    ₹{item.price.toLocaleString('en-IN')}
+                </span>
                 <button
                     onClick={onAddClick}
                     className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#88f59b] to-[#5fd672] rounded-full font-bold text-slate-900 hover:scale-105 transition-transform shadow-md"
