@@ -79,7 +79,7 @@ const menuData = [
         description: "Choose any two pizza flavors on one pizza",
         image: pizza2,
         category: "pizza",
-        price: 649,
+        price: 689,
         isPizza: true
     },
     {
@@ -212,7 +212,7 @@ export default function MenuPage() {
                                             "description": "Our signature san marzano sauce, fior Di latte cheese, Pamesan cheese, EVOO drizzle. (We use our own signature san marzano sauce. Take one bite, and the flavor will stay with you)",
                                             "offers": {
                                                 "@type": "Offer",
-                                                "price": "449",
+                                                "price": "319",
                                                 "priceCurrency": "INR"
                                             }
                                         },
@@ -222,7 +222,7 @@ export default function MenuPage() {
                                             "description": "Our Signature San marzana sauce, Grilled zucchini, bell peppers, mozarella, montery jack, origano flakes. (Crafted with a great cheese combination and fresh, colorful veggies.)",
                                             "offers": {
                                                 "@type": "Offer",
-                                                "price": "569",
+                                                "price": "389",
                                                 "priceCurrency": "INR"
                                             }
                                         },
@@ -232,7 +232,7 @@ export default function MenuPage() {
                                             "description": "Chefs special mushroom cheese sauce, Fresh Shredded Mozzarella, mushrooms, truffle oil drizzle, chedder cheese, arugula leaves. (Chef special Mushroom Sauce: Trust us.. the taste starts from the first bite)",
                                             "offers": {
                                                 "@type": "Offer",
-                                                "price": "689",
+                                                "price": "459",
                                                 "priceCurrency": "INR"
                                             }
                                         },
@@ -242,7 +242,7 @@ export default function MenuPage() {
                                             "description": "Basil pesto sauce, mozzarella, cherry tomatoes, pine nuts",
                                             "offers": {
                                                 "@type": "Offer",
-                                                "price": "789",
+                                                "price": "559",
                                                 "priceCurrency": "INR"
                                             }
                                         }
@@ -259,7 +259,7 @@ export default function MenuPage() {
                                             "description": "Fresh Cream, Full Cream Milk, Vanilla Essence, Veg Gelatin, Sugar, Blueberries and Lemon",
                                             "offers": {
                                                 "@type": "Offer",
-                                                "price": "199",
+                                                "price": "79",
                                                 "priceCurrency": "INR"
                                             }
                                         }
@@ -276,7 +276,7 @@ export default function MenuPage() {
                                             "description": "Refreshing fermented tea beverage",
                                             "offers": {
                                                 "@type": "Offer",
-                                                "price": "230",
+                                                "price": "199",
                                                 "priceCurrency": "INR"
                                             }
                                         }
