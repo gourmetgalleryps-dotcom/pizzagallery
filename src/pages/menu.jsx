@@ -90,7 +90,7 @@ const menuData = [
     {
         id: 9,
         title: "3 Cheese Broccoli Pizza",
-        description: "Cream sauce, ricotta, broccoli, paprika, red onions, fresh mozzarella, cheddar cheese, lemon zest, EVOO drizzle",
+        description: "Cream Sauce, Ricotta, Broccoli, Paprika, Red Onions, Fresh Shredded Mozzarella cheese, Cheddar Cheese, Lemon Zest, EVOO drizzle",
         image: cheesePizza,
         category: "pizza",
         price: 689,
@@ -99,7 +99,7 @@ const menuData = [
     {
         id: 10,
         title: "Veg Farmhouse Pizza",
-        description: "Marinara sauce, green and yellow zucchini, red and yellow bell pepper, broccoli, sundried tomatoes, paprika, jalapenos, black olives, fresh mozzarella, Monterey Jack cheese, EVOO drizzle",
+        description: "Marinara sauce, Green and Yellow Zucchini, Red and Yellow Bell pepper, Broccoli, Sundried Tomatoes, Peprika, Jalapenos, Black Olives, Fresh Shredded Mozzarella cheese, Monterey Jack cheese, EVOO drizzle",
         image: vegFarm,
         category: "pizza",
         price: 789,
@@ -108,7 +108,7 @@ const menuData = [
     {
         id: 11,
         title: "Spicy Paneer Pizza",
-        description: "Spicy herbed paneer, bell peppers, herbed red onions, fresh mozzarella cheese, EVOO drizzle",
+        description: "Marinara Sauce, Spicy Herbed Paneer, Bellpeppers, Herbed Red Onions, Fresh Shredded Mozzarella Cheese, EVOO drizzle",
         image: spicyPaneer,
         category: "pizza",
         price: 689,
@@ -117,7 +117,7 @@ const menuData = [
     {
         id: 12,
         title: "Spicy Hawaiian Pizza",
-        description: "Marinara sauce, pineapple chunks, red onions, jalapenos, sundried tomatoes, fresh mozzarella cheese, cheddar cheese, EVOO drizzle",
+        description: "Marinara sauce, Pineapple chunks, Red onions, Jalapenos, Sun Dried Tomatoes, Fresh Shredded Mozzarella Cheese, Cheddar Cheese, EVOO drizzle.",
         image: hawaiianPizza,
         category: "pizza",
         price: 659,
@@ -299,7 +299,7 @@ export default function MenuPage() {
                                         {
                                             "@type": "MenuItem",
                                             "name": "3 Cheese Broccoli Pizza",
-                                            "description": "Cream sauce, ricotta, broccoli, paprika, red onions, fresh mozzarella, cheddar cheese, lemon zest, EVOO drizzle",
+                                            "description": "Cream Sauce, Ricotta, Broccoli, Paprika, Red Onions, Fresh Shredded Mozzarella cheese, Cheddar Cheese, Lemon Zest, EVOO drizzle",
                                             "offers": {
                                                 "@type": "Offer",
                                                 "price": "689",
@@ -309,7 +309,7 @@ export default function MenuPage() {
                                         {
                                             "@type": "MenuItem",
                                             "name": "Veg Farmhouse Pizza",
-                                            "description": "Marinara sauce, green and yellow zucchini, red and yellow bell pepper, broccoli, sundried tomatoes, paprika, jalapenos, black olives, fresh mozzarella, Monterey Jack cheese, EVOO drizzle",
+                                            "description": "Marinara sauce, Green and Yellow Zucchini, Red and Yellow Bell pepper, Broccoli, Sundried Tomatoes, Peprika, Jalapenos, Black Olives, Fresh Shredded Mozzarella cheese, Monterey Jack cheese, EVOO drizzle",
                                             "offers": {
                                                 "@type": "Offer",
                                                 "price": "789",
@@ -319,7 +319,7 @@ export default function MenuPage() {
                                         {
                                             "@type": "MenuItem",
                                             "name": "Spicy Paneer Pizza",
-                                            "description": "Spicy herbed paneer, bell peppers, herbed red onions, fresh mozzarella cheese, EVOO drizzle",
+                                            "description": "Marinara Sauce, Spicy Herbed Paneer, Bellpeppers, Herbed Red Onions, Fresh Shredded Mozzarella Cheese, EVOO drizzle",
                                             "offers": {
                                                 "@type": "Offer",
                                                 "price": "689",
@@ -329,7 +329,7 @@ export default function MenuPage() {
                                         {
                                             "@type": "MenuItem",
                                             "name": "Spicy Hawaiian Pizza",
-                                            "description": "Marinara sauce, pineapple chunks, red onions, jalapenos, sundried tomatoes, fresh mozzarella cheese, cheddar cheese, EVOO drizzle",
+                                            "description": "Marinara sauce, Pineapple chunks, Red onions, Jalapenos, Sun Dried Tomatoes, Fresh Shredded Mozzarella Cheese, Cheddar Cheese, EVOO drizzle.",
                                             "offers": {
                                                 "@type": "Offer",
                                                 "price": "659",

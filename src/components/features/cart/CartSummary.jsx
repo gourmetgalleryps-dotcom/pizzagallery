@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image";
 import Icon from "@/components/ui/Icon";
 import Button from "@/components/ui/Button";
 import { useCart } from "@/context/CartContext";
@@ -101,6 +102,31 @@ export default function CartSummary({ customerInfo, onCustomerInfoSubmit, onCust
           <span>Total</span>
           <span className="text-primary">₹{total.toLocaleString('en-IN')}</span>
         </div>
+      </div>
+
+      {/* QR Payment Instructions */}
+      <div className="mt-2 p-4 rounded-2xl bg-green-50 border border-green-200 space-y-3">
+        <h3 className="text-base font-bold text-green-800">
+          Step 3: Scan &amp; Pay
+        </h3>
+        <div className="flex items-center justify-center">
+          <Image
+            src="/upi-qr.jpeg"
+            alt="Scan this QR to pay"
+            width={180}
+            height={180}
+            className="rounded-xl border border-green-200 bg-white"
+          />
+        </div>
+        <p className="text-sm text-gray-700 text-center">
+          Please pay <span className="font-bold">₹{total.toLocaleString('en-IN')}</span> by scanning this QR code.
+        </p>
+        <p className="text-xs text-gray-600 text-center">
+          Order ID: <span className="font-semibold">{whatsAppData.orderId}</span>
+        </p>
+        <p className="text-xs text-gray-600 text-center">
+          After making the payment, take a screenshot of the successful transaction and send it to us on WhatsApp along with your name and this order ID.
+        </p>
       </div>
 
       {/* WhatsApp Order Button */}
