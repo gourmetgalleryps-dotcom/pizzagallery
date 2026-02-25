@@ -16,6 +16,11 @@ import pizza2 from '@/images/pizza2.jpeg';
 import pizza3 from '@/images/pizza3.jpeg';
 import pizza4 from '@/images/pizza4.jpeg';
 import pizza5 from '@/images/pizza5.jpeg';
+import cheesePizza from '@/images/cheese.jpeg';
+import hawaiianPizza from '@/images/hawaian.jpeg';
+import spicyPaneer from '@/images/spicy-paneer.jpeg';
+import vegFarm from '@/images/veg-farm.jpeg';
+import grapeKombucha from '@/images/grape.jpeg';
 import story from '@/images/story.jpeg';
 
 const beVietnamPro = Be_Vietnam_Pro({
@@ -83,6 +88,42 @@ const menuData = [
         isPizza: true
     },
     {
+        id: 9,
+        title: "3 Cheese Broccoli Pizza",
+        description: "Cream sauce, ricotta, broccoli, paprika, red onions, fresh mozzarella, cheddar cheese, lemon zest, EVOO drizzle",
+        image: cheesePizza,
+        category: "pizza",
+        price: 689,
+        isPizza: true
+    },
+    {
+        id: 10,
+        title: "Veg Farmhouse Pizza",
+        description: "Marinara sauce, green and yellow zucchini, red and yellow bell pepper, broccoli, sundried tomatoes, paprika, jalapenos, black olives, fresh mozzarella, Monterey Jack cheese, EVOO drizzle",
+        image: vegFarm,
+        category: "pizza",
+        price: 789,
+        isPizza: true
+    },
+    {
+        id: 11,
+        title: "Spicy Paneer Pizza",
+        description: "Spicy herbed paneer, bell peppers, herbed red onions, fresh mozzarella cheese, EVOO drizzle",
+        image: spicyPaneer,
+        category: "pizza",
+        price: 689,
+        isPizza: true
+    },
+    {
+        id: 12,
+        title: "Spicy Hawaiian Pizza",
+        description: "Marinara sauce, pineapple chunks, red onions, jalapenos, sundried tomatoes, fresh mozzarella cheese, cheddar cheese, EVOO drizzle",
+        image: hawaiianPizza,
+        category: "pizza",
+        price: 659,
+        isPizza: true
+    },
+    {
         id: 7,
         title: "Panna Cotta",
         description: "Fresh Cream, Full Cream Milk, Vanilla Essence, Veg Gelatin, Sugar, Blueberries and Lemon",
@@ -93,9 +134,18 @@ const menuData = [
     },
     {
         id: 8,
-        title: "Kombucha",
-        description: "Refreshing fermented tea beverage",
+        title: "Kombucha - Pomegranate Basil",
+        description: "Refreshing pomegranate basil kombucha",
         image: kombucha,
+        category: "beverages",
+        price: 230,
+        isPizza: false
+    },
+    {
+        id: 13,
+        title: "Kombucha - Grape Rosemary",
+        description: "Refreshing grape rosemary kombucha",
+        image: grapeKombucha,
         category: "beverages",
         price: 230,
         isPizza: false
@@ -245,6 +295,46 @@ export default function MenuPage() {
                                                 "price": "559",
                                                 "priceCurrency": "INR"
                                             }
+                                        },
+                                        {
+                                            "@type": "MenuItem",
+                                            "name": "3 Cheese Broccoli Pizza",
+                                            "description": "Cream sauce, ricotta, broccoli, paprika, red onions, fresh mozzarella, cheddar cheese, lemon zest, EVOO drizzle",
+                                            "offers": {
+                                                "@type": "Offer",
+                                                "price": "689",
+                                                "priceCurrency": "INR"
+                                            }
+                                        },
+                                        {
+                                            "@type": "MenuItem",
+                                            "name": "Veg Farmhouse Pizza",
+                                            "description": "Marinara sauce, green and yellow zucchini, red and yellow bell pepper, broccoli, sundried tomatoes, paprika, jalapenos, black olives, fresh mozzarella, Monterey Jack cheese, EVOO drizzle",
+                                            "offers": {
+                                                "@type": "Offer",
+                                                "price": "789",
+                                                "priceCurrency": "INR"
+                                            }
+                                        },
+                                        {
+                                            "@type": "MenuItem",
+                                            "name": "Spicy Paneer Pizza",
+                                            "description": "Spicy herbed paneer, bell peppers, herbed red onions, fresh mozzarella cheese, EVOO drizzle",
+                                            "offers": {
+                                                "@type": "Offer",
+                                                "price": "689",
+                                                "priceCurrency": "INR"
+                                            }
+                                        },
+                                        {
+                                            "@type": "MenuItem",
+                                            "name": "Spicy Hawaiian Pizza",
+                                            "description": "Marinara sauce, pineapple chunks, red onions, jalapenos, sundried tomatoes, fresh mozzarella cheese, cheddar cheese, EVOO drizzle",
+                                            "offers": {
+                                                "@type": "Offer",
+                                                "price": "659",
+                                                "priceCurrency": "INR"
+                                            }
                                         }
                                     ]
                                 },
@@ -272,11 +362,21 @@ export default function MenuPage() {
                                     "hasMenuItem": [
                                         {
                                             "@type": "MenuItem",
-                                            "name": "Kombucha",
-                                            "description": "Refreshing fermented tea beverage",
+                                            "name": "Kombucha - Pomegranate Basil",
+                                            "description": "Refreshing pomegranate basil kombucha",
                                             "offers": {
                                                 "@type": "Offer",
-                                                "price": "199",
+                                                "price": "230",
+                                                "priceCurrency": "INR"
+                                            }
+                                        },
+                                        {
+                                            "@type": "MenuItem",
+                                            "name": "Kombucha - Grape Rosemary",
+                                            "description": "Refreshing grape rosemary kombucha",
+                                            "offers": {
+                                                "@type": "Offer",
+                                                "price": "230",
                                                 "priceCurrency": "INR"
                                             }
                                         }
