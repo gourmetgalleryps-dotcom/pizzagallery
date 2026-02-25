@@ -3,7 +3,7 @@ import Image from "next/image";
 import Icon from "@/components/ui/Icon";
 import Button from "@/components/ui/Button";
 import { useCart } from "@/context/CartContext";
-import { useWhatsApp } from "@/hooks/useWhatsApp";
+import { useWhatsApp, generateOrderId } from "@/hooks/useWhatsApp";
 import { sendToGoogleSheets } from "@/utils/googleSheets";
 import { GOOGLE_SHEETS_WEB_APP_URL } from "@/data/constants";
 import CustomerInfoForm from "./CustomerInfoForm";
@@ -14,7 +14,8 @@ import CustomerInfoForm from "./CustomerInfoForm";
  */
 export default function CartSummary({ customerInfo, onCustomerInfoSubmit, onCustomerInfoCancel }) {
   const { cart, getTotalPrice, clearCart } = useCart();
-  const whatsAppData = useWhatsApp(cart.items, customerInfo);
+  const [orderId] = useState(() => generateOrderId());
+  const whatsAppData = useWhatsApp(cart.items, customerInfo, orderId);
   const [promoCode, setPromoCode] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -32,7 +33,7 @@ export default function CartSummary({ customerInfo, onCustomerInfoSubmit, onCust
     try {
       // Prepare order data for Google Sheets
       const orderData = {
-        orderId: whatsAppData.orderId,
+        orderId,
         customerName: customerInfo.name,
         customerMobile: customerInfo.mobile,
         items: cart.items.map((item) => ({
@@ -111,7 +112,7 @@ export default function CartSummary({ customerInfo, onCustomerInfoSubmit, onCust
         </h3>
         <div className="flex items-center justify-center">
           <Image
-            src="/upi-qr.jpeg"
+            src="/upi-scan.jpeg"
             alt="Scan this QR to pay"
             width={180}
             height={180}
@@ -122,7 +123,7 @@ export default function CartSummary({ customerInfo, onCustomerInfoSubmit, onCust
           Please pay <span className="font-bold">₹{total.toLocaleString('en-IN')}</span> by scanning this QR code.
         </p>
         <p className="text-xs text-gray-600 text-center">
-          Order ID: <span className="font-semibold">{whatsAppData.orderId}</span>
+          Order ID: <span className="font-semibold">{orderId}</span>
         </p>
         <p className="text-xs text-gray-600 text-center">
           After making the payment, take a screenshot of the successful transaction and send it to us on WhatsApp along with your name and this order ID.

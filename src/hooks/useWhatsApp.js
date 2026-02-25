@@ -1,10 +1,11 @@
+import { useMemo, useRef } from "react";
 import { WHATSAPP_NUMBER } from "@/data/constants";
 
 /**
  * Generate a unique order ID
  * @returns {string} - Order ID in format ORD-YYYYMMDD-HHMMSS-XXXX
  */
-const generateOrderId = () => {
+export const generateOrderId = () => {
   const now = new Date();
   const year = now.getFullYear();
   const month = String(now.getMonth() + 1).padStart(2, '0');
@@ -23,9 +24,14 @@ const generateOrderId = () => {
  *
  * @param {Array} cartItems - Array of cart items with {id, name, price, quantity, size}
  * @param {Object} customerInfo - Customer information {name, mobile}
+ * @param {string} providedOrderId - Optional pre-generated order ID
  * @returns {Object} - { message, url, orderId }
  */
-export function useWhatsApp(cartItems = [], customerInfo = null) {
+export function useWhatsApp(cartItems = [], customerInfo = null, providedOrderId = null) {
+  // Keep a stable orderId for the lifetime of this hook instance,
+  // using the provided one if available.
+  const orderIdRef = useRef(providedOrderId || generateOrderId());
+
   /**
    * Formats cart items into WhatsApp message string
    * Format:
@@ -47,7 +53,7 @@ export function useWhatsApp(cartItems = [], customerInfo = null) {
       return "";
     }
 
-    const orderId = generateOrderId();
+    const orderId = orderIdRef.current;
     let message = "*🍕 New Order - Pizza Gallery*\n";
     message += `*Order ID: ${orderId}*\n\n`;
     
@@ -97,7 +103,7 @@ export function useWhatsApp(cartItems = [], customerInfo = null) {
     return `https://wa.me/${WHATSAPP_NUMBER.replace(/[^0-9]/g, "")}?text=${encodedMessage}`;
   };
 
-  const result = formatMessage();
+  const result = useMemo(() => formatMessage(), [cartItems, customerInfo]);
 
   return {
     message: result?.message || "",
